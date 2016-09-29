@@ -1,1 +1,24 @@
 <h3>Welcome to the test <strong>'Administrator app'</strong> !</h3>
+<hr>
+<h4>Listing users</h4><br>
+<div class="col-md-8 col-md-offset-2 profile">
+  <% @users.each do |user| %>
+  
+    <% if user.picture? %>
+      <%= image_tag user.picture.url, size: "100x100", class: "profile-picture" %>
+    <% end %>
+    
+    <p class="lead"><%=  user.full_name  %></p>
+    
+    <p><small>Admin </small>
+      <% if user.admin? %>
+        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+      <% else %>
+        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+      <% end %>
+    </p>
+    <p><small><%= user.email %> | Birthday: <%= user.birth_date %></small></p>
+    <h4><%= user.bio %></h4>
+    <hr>
+  <% end %>
+</div>
