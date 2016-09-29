@@ -18,6 +18,7 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
+gem 'rails_admin', '~> 1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
